@@ -4,14 +4,15 @@ const initialState = {
   users: [],
 };
 const Slice = createSlice({
+  name: "user",
   initialState,
   reducers: {
-    adduser: (state, action) => {
-      const data = { id: nanoid(), name: action.name };
+    addusers: (state, action) => {
+      const data = { id: nanoid(), name: action.payload };
       state.users.push(data);
     },
   },
 });
 
-export const { adduser } = slice.actions;
+export const { addusers } = Slice.actions;
 export default Slice.reducer;
