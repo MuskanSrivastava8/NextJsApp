@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { addusers } from "../redux/slice";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 export default function AddUser(params) {
   const [name, setName] = useState("");
   const dispatch= useDispatch()
@@ -20,6 +21,7 @@ export default function AddUser(params) {
         placeholder="Enter the name"
       ></input>
       <button onClick={userDispatch}>Save</button>
+      <Link href={"/removeuser"}>Remove user</Link>
     </>
   );
 }
