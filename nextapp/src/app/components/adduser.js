@@ -22,6 +22,10 @@ export default function AddUser(params) {
       ></input>
       <button onClick={userDispatch}>Save</button>
       <Link href={"/removeuser"}>Remove user</Link>
+      <Link href={"/todolist"}>Todo list</Link>
+      <Link href={"/apiUser"}>API User list</Link>
+
+      
     </>
   );
 }
